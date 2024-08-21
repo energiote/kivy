@@ -1,0 +1,45 @@
+size_hint: x, y
+  - Por defecto los valores en el layout (en este caso boxLayout) es de 1,1
+      Ej = size_hint:1, 1
+  - Estos valores hacen que el tamaño sea adaptable (%)
+  - Valores estaticos:
+    - Podemos usar el None tanto en x como y = size_hint:None, None
+      - Podermos darle tamaño de 2 formas =
+          - Opción 1 = size:"100dp", "100dp"
+          - Opción 2 =
+            width:"100dp"
+            height"100dp"
+  - Un valor estático y otro dinamico:
+    - Si usamos en una de las 2 coordenadas = size_hint:1 o None,1 o None
+        Ej =  size_hint:1, None
+              height:"100dp"
+      - Conclusión = 
+        El valor X de size_hint, al ser 1, será un tamaño adaptable (%). Entonces, el valor Y, al ser None, podremos modificar su tamaño estático con height:""
+      
+pos_hint: {"":_}
+  - Sintaxis:
+    - Horizontal = {"x":__} {"center_x":__} {"right":__}
+      - (Lado izquierdo), (punto medio), (lado derecho)
+    - Vertical = {"y":__} {"center_y":__} {"top":__}
+      - (Lado inferior), (punto medio), (lado superior)
+      
+  - Conlusión =
+    - Los valores por defecto usarán la posicón de "X" e "Y", siendo su punto de partida
+      {"x": 0} =  default (Izquierda)
+      {"y": 0} =  default (Abajo)
+    - Para centar un objeto usamos center_X o Y
+      
+NOTAS FINALES:
+  - Ej =  orientation:"vertical"
+            Button:.
+              size_hint:"2,1"
+  - Explicación: size_hint:x,y
+    - Cuando estamos en la orientación vertical el valor máximo de x será 1 y si estamos en la horizontal, el valor máximo de y será 1.
+  - Conclusión:
+    - Entonces si revasamos ese parametro, se saldrá de la pantalla
+  - Consejos:
+    - Podemos modificar el tamaño del objeto por encima del valor 1 dependiendo de su orientación, en vertical podemos modicar su height y horizontal su width
+
+
+
+  

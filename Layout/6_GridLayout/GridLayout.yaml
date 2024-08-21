@@ -1,0 +1,38 @@
+- 
+# Crear un Layout sin necesidad de declararlo en el main.py
+<Name_declaration@type_Layout>: Ej = <GridLayoutExample@GridLayout>:.
+#Tenemos tanto rows(filas) como cols(columnas) =
+  rows: nº
+  cols: nº
+
+- Si queremos cambiar el tamaño de un elemento, tendrá que sea en todos los elementos de esa fila o columna, si no, no se verán los cambios.
+
+  Button:
+    text: "A"
+    size_hint: .5, 1
+  Button:
+    text: "B"
+  Button:
+    text: "C"
+  Button:
+    text: "D"
+    size_hint: .5, 1
+  Button:
+    text: "E"
+  Button:
+    text: "F"
+
+- Podemos usar un boxLayout que hayamos definido todas sus caracteristicas debajo.
+
+  Button:
+    text: "A"
+
+  # Añadir un BoxLayout ya definido
+  BoxLayoutExample:
+
+  Button:
+    text: "C"
+
+
+  
+  

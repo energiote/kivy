@@ -1,0 +1,23 @@
+Añadir un Layout dentro de otro:
+
+  #Dentro del <boxLayoutExample> en el archivo.vk ponemos al mismo nivel de orientation o Button el siguiente text = BoxLayout:.
+  <BoxLayoutExample>:
+    orientation: "horizontal"
+    Button:
+      text: "A"
+
+    # Un BoxLayout dentro de un BoxLayout
+    BoxLayout:
+      orientation: "vertical"
+      # Hace que los elementos tengan un espaciado (gap)
+      spacing: "__dp"
+      Button:
+        text: "A"
+      Button:
+        text: "B"
+
+    Button:
+      text: "A"
+
+
+

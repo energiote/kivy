@@ -1,0 +1,5 @@
+https://youtu.be/l8Imtec4ReQ?si=ji0HTsteFeh_tNIz&t=3574
+
+size_hint: 1,   None
+height: 4000                  demasiado largo
+height: self.minimum_height   ocupará el tamaño de todos los elementos

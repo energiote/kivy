@@ -1,0 +1,53 @@
+LIBRERIAS:
+    Tkinter
+        - Viene automaticamente con la instalación de Python
+        - Es facil pero no muy potente
+    QT
+        - Es bueno para crear interfaces ricas en funciones con muchos tipos de widgets.
+        - Viene con una licencia comercial
+    Pygame
+        - Es más específico para juegos 2d para windows y mac
+    Kivy
+        - Está basado en opengl por lo que los gráficos son rápidos.
+        - Compatibles con Linux, windows, mac os, adroid ips y incliso frambuesa.
+
+Indice:
+    1: The lab: Aprenderemos la libreria de kivy
+        1.- Layouts (Diseños)
+            - BoxLayout
+            - AnchorLayout
+            - GridLayout
+            - StackLayout
+            - ScrollView
+            - PageLayout
+
+        2.- Widgets
+        3.- Canvas (Lienzo)
+
+    2: Galaxy: Practica tus habilidades anteriormente dadas
+        v1.- Gestión de la perspectiva de los movimientos
+        v2.- Generaremos el aterrizas, mostrar la nave espacial y gestionar las colisiones
+        v3.- Agregar menu al juego, visualizaciones de la puntuación, imágenes y reproducir sonidos
+
+PROJECT CREATION AND INSTALLATION OF KIVY:
+
+  1: Vemos si nuestra versión de python es compatible con kivy:
+    - La versión aceptadas van desde el 3.7 a 3.12
+    - Podemos cambiar las versiones instaladas con=
+      - wich python3
+  2: Creamos maquina virutal:
+    - Asegurate de tener los privilegios =
+      - Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+  3: Intalamos kivy:
+
+Notas:
+
+- Interfaz:
+    - La interfaz es como si fuera ejes de coordenadas
+    - Empieza desde el punto 0,0 abajo a la izquierda
+
+- Codigo:
+    - def __init__(self, **kwargs):
+        - Empaqueta todos los argumentos de palabras clave utilizados en cualquier llamada dada a __init__ en un dict
+    - super().__init__(**kwargs):
+        - Los expande nuevamente en argumentos de palabras clave
