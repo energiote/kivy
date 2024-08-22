@@ -43,71 +43,57 @@
 #### 3. Instalar kivy
 * `pip install kivy`
 
-<br>
-<br>
-
 ## Sintaxis
 >[Introducción](#introducción) /  Sintaxis
-<hr>
-
 ```py
 from kivy.app import App
 
-class ProyectApp(App):
+class Nombre_App(App):
     pass
 
 ProyectApp().run()
 ```
 
-1. Heredar clases:  
-    - Es necesario que la clase base de nuestra aplicación herede la clase de kivy
-```py
-# Importamos del archivo kivy/app.py la clase App
-from kivy.app import App
+- Importamos la clase `App` del archivo kivy/app.py `from kivy.app`.
+- Heredamos las variables de la clase `(App)` en nuestra nueva clase `Nombre_App`.
+- La palabra clave `pass` permite las clases vacias.
+- Arrancamos la clase `ProyectApp()` con la función `run()`.
 
-# ProyectApp heredará la clase de kivy/app.py
-class ProyectApp(App):
-    pass
-```
-2. Definir nuestra aplicación  
-    - Es donde podemos definir las propiedades de la App
-    - Puedes cambiar el nombre de tu la aplicación ***ProyectApp***
-```py
-class ProyectApp(App):
-    pass
-```
-3. Arrancar la Aplicación
-    - Se llama al metodo ***run()***
-```py
-ProyectApp().run()
-```
-<br>
-<br>
+    ![Black Console](/imgs/introducción/black_console_2.png)
 
 ## Explicación código
 >[Introducción](#introducción) /  Explicación código
-<hr>
 
+### Uso de la clase base
 ```py
-def __init__(self, **kwargs):
-    super().__init__(**kwargs)
-```
-* `__init__` Se utiliza para inicializar un nuevo objeto de una clase  
-* `self` de si mismo  
-* `**kwargs` es un diccionario que contiene todos los argumentos pasados al constructor que no se especificarion de forma explícita :
-    * Ej: {'ciudad': 'Madrid', 'profesion': 'Ingeniero'}
-```py
-def __init__(self, **kwargs):
-```
+# También se puede utilizar AnchorLayout, GridLayout, StackLayout,..
+from kivy.uix.boxlayout import BoxLayout
 
-```py
-super().__init__(**kwargs)
+    class Nombre_clase_layout(BoxLayout):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
 ```
-- Codigo:
-    - def __init__(self, **kwargs):
-        - Empaqueta todos los argumentos de palabras clave utilizados en cualquier llamada dada a __init__ en un dict
-    - super().__init__(**kwargs):
-        - Los expande nuevamente en argumentos de palabras clave
+- Llamamos al arhivo kivy/uix/boxlayout.py e importamos `BoxLayout`.
+- Creamos un subclase `Nombre_clase_layout` al que heredaremos las variables de la clase base`(BoxLayout)`.
+- Definimos las variables de instancia con `__init__`:
+    - `self` se utliza como primer parámetro en las variables de instancia`__init__` de la clase. Permite el acceso a las varibles de la clase.
+    - `**kwargs` son los argumentos que no se especificaron de forma explicita.
+        ```py
+        class Persona:
+            def __init__(self, nombre, **kwargs):
+                self.nombre = nombre
+                self.otros_datos = kwargs
+
+        p = Persona(nombre="Sergio", edad="26", profesión= "programador")
+        print("self.nombre: ",p.nombre)
+        print("kwargs: ",p.otros_datos) 
+        ```
+    - Resultado :
+        ```
+        self.nombre:  Sergio
+        kwargs:  {'edad': '26', 'profesión': 'programador'}
+        ```
+- `super()` es una función que llama al método de la clase base`(BoxLayout)` para acceder a sus atributos de instancia mediante `.__init__` y a todos sus argumentos con `(**kwargs)`.
 
 
 
