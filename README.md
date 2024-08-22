@@ -1,18 +1,22 @@
 # Introducción
-## Índice:
-1. The lab
-    1. [Layout](/Documentation/Layout/)
-        1. [Box Layout]()
-        2. [Anchor Layout]()
-        3. [Grid Layout]()
-        4. [Stack Layout]()
-        5. [Scroll View]()
-        6. [Page Layout]()
+## <div style="position:fixed">Índice:</div>
+1. Introducción
+    1. [Instalación](#instalación)
+    2. [Sintaxis](#sintaxis)
+    3. [Explicación código](#explicación-código)
+2. The lab
+    * [Layout](/Documentation/Layout/layout.md)  
+        2.1 [Box Layout]()  
+        2.1 [Anchor Layout]()  
+        2.1 [Grid Layout]()  
+        2.1 [Stack Layout]()  
+        2.1 [Scroll View]()  
+        2.1 [Page Layout]()  
 
     2. [Widget](/Documentation/Widget/)
     3. [Canvas](/Documentation/Canvas/)
     
-2. Galaxy
+3. Galaxy
     1. Gestión de la perspectiva de los movimiento
     2. Generación del terreno, mostrar la nave espacial y gestionar las colisiones
     3. Agregar menu al juego, visualización de la puntuación, imágenes y resproducir sonidos
@@ -40,8 +44,6 @@
 * `pip install kivy`
 
 ## Sintaxis
-
-#### Sintaxis básica : 
 ```py
 from kivy.app import App
 
