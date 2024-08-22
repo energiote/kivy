@@ -20,13 +20,9 @@
     1. Gestión de la perspectiva de los movimiento
     2. Generación del terreno, mostrar la nave espacial y gestionar las colisiones
     3. Agregar menu al juego, visualización de la puntuación, imágenes y resproducir sonidos
-<br>
-<br>
+
 ##  Instalación
 >[Introducción](#introducción) /  Instalación
----
-
-
 
 #### 1. Comprobación de versiones :
     
