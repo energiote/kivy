@@ -1,27 +1,31 @@
 # Introducción
-## <div style="position:fixed">Índice:</div>
-1. Introducción
-    1. [Instalación](#instalación)
-    2. [Sintaxis](#sintaxis)
-    3. [Explicación código](#explicación-código)
-2. The lab
-    * [Layout](/Documentation/Layout/layout.md)  
-        2.1 [Box Layout]()  
-        2.1 [Anchor Layout]()  
-        2.1 [Grid Layout]()  
-        2.1 [Stack Layout]()  
-        2.1 [Scroll View]()  
-        2.1 [Page Layout]()  
 
-    2. [Widget](/Documentation/Widget/)
-    3. [Canvas](/Documentation/Canvas/)
+1. Introducción
+    * [Instalación](#instalación)
+    * [Sintaxis](#sintaxis)
+    * [Explicación código](#explicación-código)
+2. The lab  
+    * [Layout](/Documentation/Layout/layout.md)  
+        * [Box Layout]()  
+        * [Anchor Layout]()  
+        * [Grid Layout]()  
+        * [Stack Layout]()  
+        * [Scroll View]()  
+        * [Page Layout]()  
+
+    * [Widget](/Documentation/Widget/)  
+    * [Canvas](/Documentation/Canvas/)  
     
 3. Galaxy
     1. Gestión de la perspectiva de los movimiento
     2. Generación del terreno, mostrar la nave espacial y gestionar las colisiones
     3. Agregar menu al juego, visualización de la puntuación, imágenes y resproducir sonidos
+<br>
+<br>
+##  Instalación
+>[Introducción](#introducción) /  Instalación
+---
 
-## Instalación
 
 
 #### 1. Comprobación de versiones :
@@ -43,7 +47,13 @@
 #### 3. Instalar kivy
 * `pip install kivy`
 
+<br>
+<br>
+
 ## Sintaxis
+>[Introducción](#introducción) /  Sintaxis
+<hr>
+
 ```py
 from kivy.app import App
 
@@ -75,8 +85,13 @@ class ProyectApp(App):
 ```py
 ProyectApp().run()
 ```
+<br>
+<br>
 
 ## Explicación código
+>[Introducción](#introducción) /  Explicación código
+<hr>
+
 ```py
 def __init__(self, **kwargs):
     super().__init__(**kwargs)
