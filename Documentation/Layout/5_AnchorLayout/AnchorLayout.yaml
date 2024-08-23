@@ -11,3 +11,40 @@ AnchorLayout:
   - La diferencia es que al poner más de un elemento(ej Button) se pone por encima del otro (AnchorLayout), en cambio en el BoxLayout se pone uno debajo del otro.
   
   - Podemos crear un BoxLayout dentro del <AnchorLayoutExample>, solo que en el boxLayout debemos especificar su tamaño con size_hint al mismo nivel que los Buttons o sea una tabulación.
+
+
+
+
+
+  <AnchorLayoutExample>:
+    # right, left, center
+    anchor_x: "center"
+    # bottom, top, center
+    anchor_y: "top"
+
+    BoxLayout:
+        size_hint: .2, .2
+        Button:
+            text:"A"
+        Button:
+            text:"B"
+
+
+
+
+
+
+AnchorLayoutExample:
+
+<AnchorLayoutExample>:
+    # right, left, center
+    anchor_x: "center"
+    # bottom, top, center
+    anchor_y: "top"
+
+    BoxLayout:
+        size_hint: .2, .2
+        Button:
+            text:"A"
+        Button:
+            text:"B"

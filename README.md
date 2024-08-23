@@ -1,11 +1,10 @@
-# Introducción
+# Introducción de Kivy
 
 1. Introducción
     * [Instalación](#instalación)
     * [Sintaxis](#sintaxis)
-    * [Explicación código](#explicación-código)
-2. The lab  
-    * [Layout](/Documentation/Layout/layout.md)  
+2. Documentación
+    * [Layout](/Documentation/Layout/layout2.md)  
         * [Box Layout]()  
         * [Anchor Layout]()  
         * [Grid Layout]()  
@@ -16,13 +15,13 @@
     * [Widget](/Documentation/Widget/)  
     * [Canvas](/Documentation/Canvas/)  
     
-3. Galaxy
+<!-- 3. Galaxy
     1. Gestión de la perspectiva de los movimiento
     2. Generación del terreno, mostrar la nave espacial y gestionar las colisiones
-    3. Agregar menu al juego, visualización de la puntuación, imágenes y resproducir sonidos
+    3. Agregar menu al juego, visualización de la puntuación, imágenes y resproducir sonidos -->
 
 ##  Instalación
->[Introducción](#introducción) /  Instalación
+>[Introducción](#introducción-de-kivy) /  Instalación
 
 #### 1. Comprobación de versiones :
     
@@ -44,14 +43,15 @@
 * `pip install kivy`
 
 ## Sintaxis
->[Introducción](#introducción) /  Sintaxis
+>[Introducción](#introducción-de-kivy) /   /  Sintaxis
+
 ```py
 from kivy.app import App
 
 class Nombre_App(App):
     pass
 
-ProyectApp().run()
+Nombre_App().run()
 ```
 
 - Importamos la clase `App` del archivo kivy/app.py `from kivy.app`.
@@ -59,42 +59,10 @@ ProyectApp().run()
 - La palabra clave `pass` permite las clases vacias.
 - Arrancamos la clase `ProyectApp()` con la función `run()`.
 
-    ![Black Console](/imgs/introducción/black_console_2.png)
+### Archivo.kv
 
-## Explicación código
->[Introducción](#introducción) /  Explicación código
-
-### Uso de la clase base
-```py
-# También se puede utilizar AnchorLayout, GridLayout, StackLayout,..
-from kivy.uix.boxlayout import BoxLayout
-
-    class Nombre_clase_layout(BoxLayout):
-        def __init__(self, **kwargs):
-            super().__init__(**kwargs)
-```
-- Llamamos al arhivo kivy/uix/boxlayout.py e importamos `BoxLayout`.
-- Creamos un subclase `Nombre_clase_layout` al que heredaremos las variables de la clase base`(BoxLayout)`.
-- Definimos las variables de instancia con `__init__`:
-    - `self` se utliza como primer parámetro en las variables de instancia`__init__` de la clase. Permite el acceso a las varibles de la clase.
-    - `**kwargs` son los argumentos que no se especificaron de forma explicita.
-        ```py
-        class Persona:
-            def __init__(self, nombre, **kwargs):
-                self.nombre = nombre
-                self.otros_datos = kwargs
-
-        p = Persona(nombre="Sergio", edad="26", profesión= "programador")
-        print("self.nombre: ",p.nombre)
-        print("kwargs: ",p.otros_datos) 
-        ```
-    - Resultado :
-        ```
-        self.nombre:  Sergio
-        kwargs:  {'edad': '26', 'profesión': 'programador'}
-        ```
-- `super()` es una función que llama al método de la clase base`(BoxLayout)` para acceder a sus atributos de instancia mediante `.__init__` y a todos sus argumentos con `(**kwargs)`.
-
+- Las clase que hemos creado será el nombre que tenga el archivo.kv, en este caso `Nombre_.kv`
+- `App` de `Nombre_App` es el conector de los archivos y no aparecerá en el nombre del archivo.kv
 
 
 
