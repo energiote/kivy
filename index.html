@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <title>Kivy</title>
+</head>
+<body>
+    
+    <!-- TODO EL CUERPO -->
+    <div id="content">
+        <!-- ENCABEZADO -->
+        <div id="heading_content">
+            <div id="structure_heading_content">
+                <img id="img_structure_heading_content" src="/Assets/imgs/Web/kivy_logo.png" alt="kivyLogo">
+                <h1 id="h1_structure_heading_content">Introducción a kivy</h1>
+            </div>
+        </div>
+        <!-- CUERPO -->
+         <div id="body_content">
+            <div class="first_container_body_content">
+                <h2 class="h2_body_content">Instalación</h2>
+                <div class="second_first_container_body_content">
+                    <h3 class="h3_h2_body_content">Comprobación de versiones</h3>
+                    <div class="thirt_second_first_container_body_content">
+                        <p>Comprobamos si nuestra <b>versión de python</b> es aceptada por <b>kivy</b>
+                        <br>
+                        Al escribrir esto, la versión actual de <b>kivy es 2.3.0</b> aceptada por <b>python 3.7 a 3.12</b></p>
+                        <p>Una vez que hemos verificado que nuestra versión de python es compatible, podemos continuar con el entorno virtual.</p>
+                        <a href="https://kivy.org/doc/stable/gettingstarted/installation.html" target="_blank">Link de la web oficial de kivy</a>
+                    </div>
+                    <h3 class="h3_h2_body_content">Entorno virtual</h3>
+                    <div class="thirt_second_first_container_body_content">
+                        <p>El entorno virtual es una forma de instalar librerias en una parte creada para su entorno especifico. Esto ayuda a que podamos exportar un proyecto con las librarias en su interior</p>
+
+                        <ol class="FirstList_content_side">
+                            <li class="list_FirstList_content_side">Instalar virtualenv <span class="cmd_code">pip install virtualenv</span></li>
+                            <li class="list_FirstList_content_side">Crear un entorno virtual <span class="cmd_code">virtualenv venv</span></li>
+                            <li class="list_FirstList_content_side">Activar el entorno virtual <span class="cmd_code">.\venv\Script\activate</span></li>
+                            <li class="list_FirstList_content_side">Desactivar entorno virtual <span class="cmd_code">deactivate</span></li> 
+                        </ul>
+                    </div>
+                    <h3 class="h3_h2_body_content">Instalar Kivy</h3>
+                    <div class="thirt_second_first_container_body_content">
+                        <p>Si ya tenemos listo los pasos anteriores, instalamos la libreria kivy <span class="cmd_code">pip install kivy</span></p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="first_container_body_content">
+                <h2 class="h2_body_content">Sintaxis Básica</h2>
+                <div class="thirt_second_first_container_body_content">
+                    <pre class="python_code">
+                        import kivy.app from App
+
+                        class Nombre_App(App):
+                            pass
+                        
+                        Nombre_App().run()
+                    </pre>
+                    <ul class="FirstList_content_side">
+                        <li>Importamos la clase <b>App</b> del archivo kivy/app.py <b>from kivy.app</b>.</li>
+                        <li>Heredamos las variables de la clase <b>(App)</b> en nuestra nueva clase <b>Nombre_App</b>.</li>
+                        <li>La palabra clave <b>pass</b> permite las clases vacias.</li>
+                        <li>Arrancamos la clase <b>ProyectApp()</b> con la función <b>run()</b>.</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+         </div>
+         
+
+    </div>
+    <div id="side">
+        <div id="heading_side">
+            <h2 id="indice_heading_side">Índice</h2>
+            <img id="img_heading_side" src="/Assets/imgs/Web/bar-menu_icon-icons.com_70305.png" alt="menu_icon">
+        </div>
+        <div id="content_side">
+            <ul class="FirstList_content_side">
+                <li>Introducción
+                    <ol class="SecondList_FirstList_content_side">
+                        <li>Instalación</li>
+                        <li>Sintaxis Básica</li>
+                    </ol>
+                </li>
+                <li>Documentación
+                    <ol class="SecondList_FirstList_content_side">
+                        <li>Layout
+                            <ul class="ThirtList_SecondList_FirstList_content_side">
+                                <li>Box Layout</li>
+                                <li>Anchor Layout</li>
+                                <li>Gris Layout</li>
+                                <li>Stack Layout</li>
+                                <li>Page Layout</li>
+                            </ul>
+                        </li>
+                        <li>Widget</li>
+                        <li>Canvas</li>
+                    </ol>
+                </li>
+                <li>Ejercicios
+                    <ol class="SecondList_FirstList_content_side">
+                        <li>Galaxy</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- <pre class="python_code">
+        from kivi.uix.boxlayout import BoxLayout
+    </pre> -->
+    <script src="script.js"></script>
+</body>
+</html>

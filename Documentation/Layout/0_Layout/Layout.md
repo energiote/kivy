@@ -1,12 +1,12 @@
 # Layout
 >[Introduction](/README.md) / Layout
 
-0. Introducción Layouts
-1. [Box Layout](#1-box-layout) 
-2. [Anchor Layout](#2-anchor-layout)  
-3. [Grid Layout](#3-grid-layout)  
-4. [Stack Layout](#4-stack-layout)  
-6. [Page Layout](#5-page-layout)
+* Introducción Layouts
+    1. [Box Layout](/Documentation/Layout/1_BoxLayout/BoxLayout.md) 
+    2. [Anchor Layout](/Documentation/Layout/2_AnchorLayout/AnchorLayout.md)  
+    3. [Grid Layout](/Documentation/Layout/3_GridLayout/GridLayout.md)  
+    4. [Stack Layout](/Documentation/Layout/4_StackLayout/StackLayout.md)  
+    6. [Page Layout](/Documentation/Layout/5_PageLayout/PageLayout.md)
 
 ## Introducción Layouts
 
@@ -112,14 +112,34 @@
     Ver ejemplo: [main.py](/Documentation/Layout/0_Layout/3_Sintaxis_in_Python&Kivy/main.py), [NameClass_.py](/Documentation/Layout/0_Layout/3_Sintaxis_in_Python&Kivy/NameClass_.kv).  
     Ruta del ejemplo: `/Documentation/Layout/0_Layout/3_Sintaxis_in_Python&Kivy`  
 
+## 2. Importar elementos de la clase base
+>[Introduction](#layout) / Layout
+```py
+# También se puede utilizar AnchorLayout, GridLayout, StackLayout,..
+from kivy.uix.boxlayout import BoxLayout
 
-## 1. Box layout
->[Introduction](#layout) / Layout
-## 2. Anchor layout
->[Introduction](#layout) / Layout
-## 3. Grid layout
->[Introduction](#layout) / Layout
-## 4. Stack layout
->[Introduction](#layout) / Layout
-## 5. Page layout
->[Introduction](#layout) / Layout
+    class Nombre_clase_layout(BoxLayout):
+        def __init__(self, **kwargs):
+            super().__init__(**kwargs)
+```
+- Llamamos al arhivo kivy/uix/boxlayout.py e importamos `BoxLayout`.
+- Creamos un subclase `Nombre_clase_layout` al que heredaremos las variables de la clase base`(BoxLayout)`.
+- Definimos las variables de instancia con `__init__`:
+    - `self` se utliza como primer parámetro en las variables de instancia`__init__` de la clase. Permite el acceso a las varibles de la clase.
+    - `**kwargs` son los argumentos que no se especificaron de forma explicita.
+        ```py
+        class Persona:
+            def __init__(self, nombre, **kwargs):
+                self.nombre = nombre
+                self.otros_datos = kwargs
+
+        p = Persona(nombre="Sergio", edad="26", profesión= "programador")
+        print("self.nombre: ",p.nombre)
+        print("kwargs: ",p.otros_datos) 
+        ```
+    - Resultado :
+        ```
+        self.nombre:  Sergio
+        kwargs:  {'edad': '26', 'profesión': 'programador'}
+        ```
+- `super()` es una función que llama al método de la clase base`(BoxLayout)` para acceder a sus atributos de instancia mediante `.__init__` y a todos sus argumentos con `(**kwargs)`.
